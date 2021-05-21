@@ -5,7 +5,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      secondsRemaining: 0,
+      secondsRemaining: 6,
     }
   }
 
