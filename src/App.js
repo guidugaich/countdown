@@ -1,6 +1,7 @@
 import React from 'react';
 import TimeInput from './TimeInput';
 import TimeDisplay from './TimeDisplay';
+import './App.css';
 
 class App extends React.Component {
   constructor() {
@@ -76,6 +77,7 @@ class App extends React.Component {
         />
         <button onClick={ this.startCountdown }>Start!</button>
         <button onClick={ this.stopCountdown }>Stop!</button>
+        <button onClick={ this.stopCountdown }>Reset</button>
         <TimeDisplay secondsRemaining = { secondsRemaining } />
       </>
     );
