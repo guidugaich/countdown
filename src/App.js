@@ -10,22 +10,28 @@ class App extends React.Component {
       inputHours: '',
       inputMinutes: '',
       inputSeconds: '',
+      timerID: ''
+    }
+  }
+
+  updateStateEverySecond = () => {
+    if (this.state.secondsRemaining > 0) {
+      this.setState((prevState) => ({
+        secondsRemaining: prevState.secondsRemaining - 1
+      }));
+    } else {
+      clearInterval(this.updateStateEverySecond);
     }
   }
 
   startCountdown = () => {
-    const updateState = () => {
-      if (this.state.secondsRemaining > 0) {
-        this.setState((prevState) => ({
-          secondsRemaining: prevState.secondsRemaining - 1
-        }));
-      } else {
-        clearInterval(updateState);
-      }
-    }
+    const timerID = setInterval(this.updateStateEverySecond, 1000);
+    this.setState({timerID: timerID})
+  }
 
-    setInterval(updateState, 1000);
-
+  stopCountdown = () => {
+    const { timerID } = this.state;
+    clearInterval(timerID);
   }
 
   getTimeFromInput = ({ target }) => {
@@ -58,6 +64,7 @@ class App extends React.Component {
           inputSeconds={ inputSeconds }
         />
         <button onClick={ this.startCountdown }>Start!</button>
+        <button onClick={ this.stopCountdown }>Stop!</button>
         <TimeDisplay secondsRemaining = { secondsRemaining } />
       </>
     );
