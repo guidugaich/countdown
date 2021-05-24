@@ -50,6 +50,17 @@ class App extends React.Component {
     }); 
   }
 
+  resetCountdown = () => {
+    this.stopCountdown();
+    this.setState({
+      secondsRemaining: 0,
+      inputHours: '',
+      inputMinutes: '',
+      inputSeconds: '',
+      timerID: ''
+    })
+  }
+
   render() {
     const { secondsRemaining, inputHours, inputMinutes, inputSeconds } = this.state;
 
