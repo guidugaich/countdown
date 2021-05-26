@@ -1,35 +1,45 @@
 import React from 'react'
+import './TimeInput.css';
 
 class TimeInput extends React.Component {
   render() {
     const { updateTimer, inputHours, inputMinutes, inputSeconds } = this.props;
     return (
-      <>
-        <label>H
+      <div className="time-input-container">
+        <label>
           <input
-            type='number'
+            type='text'
             name="inputHours"
             onChange={ updateTimer }
             value={ inputHours }
+            placeholder="HH"
+            pattern="/d*"
+            maxLength="2"
           />
         </label>
-        <label>M
+        <label>
           <input
-            type='number'
+            type='text'
             name="inputMinutes"
             onChange={ updateTimer }
             value={ inputMinutes }
+            placeholder="MM"
+            pattern="/d*"
+            maxLength="2"
           />
         </label>
-        <label>S
+        <label>
           <input
-            type='number'
+            type='text'
             name="inputSeconds"
             onChange={ updateTimer }
             value={ inputSeconds }
+            placeholder="SS"
+            pattern="/d*"
+            maxLength="2"
           />
         </label>
-      </>
+      </div>
     )
   }
 }
