@@ -75,7 +75,7 @@ class App extends React.Component {
     const { secondsRemaining, inputHours, inputMinutes, inputSeconds } = this.state;
 
     return (
-      <>
+      <div className="app-container">
         <h1>Countdown</h1>
         <h3>Quanto tempo você quer marcar?</h3>
         <TimeInput
@@ -84,11 +84,13 @@ class App extends React.Component {
           inputMinutes={ inputMinutes }
           inputSeconds={ inputSeconds }
         />
-        <button onClick={ this.startCountdown }>Start!</button>
-        <button onClick={ this.stopCountdown }>Stop!</button>
-        <button onClick={ this.resetCountdown }>Reset</button>
+        <div className="app-buttons-container">
+          <button onClick={ this.stopCountdown }>Stop!</button>
+          <button onClick={ this.startCountdown }>Start!</button>
+          <button onClick={ this.resetCountdown }>Reset</button>
+        </div>
         <TimeDisplay secondsRemaining = { secondsRemaining } />
-      </>
+      </div>
     );
   }
 }
