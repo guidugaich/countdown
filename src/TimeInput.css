@@ -12,11 +12,12 @@ input::-webkit-inner-spin-button {
 }
 
 .time-input-container label input {
-  background-color: lightgray;
+  background-color: #404040;
   border:  none;
   width: 60px;
   height: 60px;
   text-align: center;
   margin: 0 10px;
   font-size: 30px;
+  color: white;
 }
