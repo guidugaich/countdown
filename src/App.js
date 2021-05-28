@@ -22,7 +22,7 @@ class App extends React.Component {
         secondsRemaining: prevState.secondsRemaining - 1
       }));
     } else {
-      clearInterval(this.updateStateEverySecond);
+      this.resetCountdown();
     }
   }
 
@@ -55,6 +55,7 @@ class App extends React.Component {
   }
 
   getTimeFromInput = ({ target }) => {
+    this.stopCountdown();
     const { name } = target;
     let { value } = target;
 
@@ -72,7 +73,12 @@ class App extends React.Component {
 
 
   render() {
-    const { secondsRemaining, inputHours, inputMinutes, inputSeconds } = this.state;
+    const {
+      secondsRemaining,
+      inputHours,
+      inputMinutes,
+      inputSeconds,
+      running } = this.state;
 
     return (
       <div className="app-container">
@@ -85,11 +91,14 @@ class App extends React.Component {
           inputSeconds={ inputSeconds }
         />
         <div className="app-buttons-container">
-          <button onClick={ this.stopCountdown }>Stop!</button>
-          <button onClick={ this.startCountdown }>Start!</button>
-          <button onClick={ this.resetCountdown }>Reset</button>
+          <button onClick={ this.stopCountdown } id="stop">Stop!</button>
+          <button onClick={ this.startCountdown } id="start">Start!</button>
+          <button onClick={ this.resetCountdown } id="reset">Reset</button>
         </div>
-        <TimeDisplay secondsRemaining = { secondsRemaining } />
+        <TimeDisplay
+          secondsRemaining = { secondsRemaining }
+          running={ running }
+        />
       </div>
     );
   }
