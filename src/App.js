@@ -83,7 +83,7 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <h1>countdown</h1>
-        <h3>Quanto tempo você quer marcar?</h3>
+        <h3>set the time below</h3>
         <TimeInput
           updateTimer={ this.getTimeFromInput }
           inputHours={ inputHours }
