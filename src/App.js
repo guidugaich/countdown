@@ -82,7 +82,7 @@ class App extends React.Component {
 
     return (
       <div className="app-container">
-        <h1>Countdown</h1>
+        <h1>countdown</h1>
         <h3>Quanto tempo você quer marcar?</h3>
         <TimeInput
           updateTimer={ this.getTimeFromInput }
@@ -91,9 +91,9 @@ class App extends React.Component {
           inputSeconds={ inputSeconds }
         />
         <div className="app-buttons-container">
-          <button onClick={ this.stopCountdown } id="stop">Stop!</button>
-          <button onClick={ this.startCountdown } id="start">Start!</button>
-          <button onClick={ this.resetCountdown } id="reset">Reset</button>
+          <button onClick={ this.stopCountdown } id="stop">STOP</button>
+          <button onClick={ this.startCountdown } id="start">START</button>
+          <button onClick={ this.resetCountdown } id="reset">RESET</button>
         </div>
         <TimeDisplay
           secondsRemaining = { secondsRemaining }

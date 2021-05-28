@@ -1,6 +1,7 @@
 body {
   background-color: #000000;
   color: white;
+  font-family: 'Ubuntu';
 }
 
 .app-container {
@@ -21,4 +22,27 @@ body {
   height: 50px;
   width: 80px;
   border-radius: 15px;
+  border: 1px solid white;
+  background-color: black;
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+#start:hover {
+  background-color: green;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+
+#stop:hover {
+  background-color: red;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+
+#reset:hover {
+  background-color: goldenrod;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
 }
