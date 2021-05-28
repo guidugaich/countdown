@@ -1,0 +1,37 @@
+@font-face{
+  font-family:'digital-clock-font';
+  src: url('./digital-7.ttf');
+ }
+
+.time-display {
+  width: fit-content;
+  height: 15vh;
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 20px;
+  text-align: center;
+  font-family:'digital-clock-font';
+  position: relative;
+}
+
+.time-display-container-running {
+  border: 3px solid lightgreen;
+}
+
+.time-display-container-stopped {
+  border: 3px solid red;
+}
+
+.time-display div {
+  width: 100%;
+  height: 100%;
+  font-size: 100px;
+}
+
+.time-display-stopped {
+  color: red;
+}
+
+.time-display-running {
+  color: green;
+}
