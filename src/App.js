@@ -12,7 +12,8 @@ class App extends React.Component {
       inputMinutes: '',
       inputSeconds: '',
       timerID: '',
-      running: false
+      running: false,
+      dark: true,
     }
   }
 
@@ -71,6 +72,13 @@ class App extends React.Component {
     }); 
   }
 
+  switchTheme = () => {
+    if (this.state.dark) {
+      this.setState({dark: false});
+    } else {
+      this.setState({dark: true});
+    }
+  }
 
   render() {
     const {
@@ -78,11 +86,17 @@ class App extends React.Component {
       inputHours,
       inputMinutes,
       inputSeconds,
-      running } = this.state;
+      running,
+      dark } = this.state;
 
     return (
-      <div className="app-container">
-        <h1>countdown</h1>
+      <div className={`app-container ${dark ? '': 'app-container-light'}`}>
+        <div className="header">
+          <h1>countdown</h1>
+          <button onClick={ this.switchTheme }>
+            <img src='./icons/todark.png' alt='j'/>
+          </button>
+        </div>
         <h3>set the time below</h3>
         <TimeInput
           updateTimer={ this.getTimeFromInput }
