@@ -120,6 +120,16 @@ class App extends React.Component {
           secondsRemaining = { secondsRemaining }
           running={ running }
         />
+        <p className="credits">
+          developed by
+          <a
+            href='https://github.com/guidugaich'
+            target='_blank'
+            rel='noreferrer'
+          >
+            @guidugaich
+          </a>
+        </p>
       </div>
     );
   }
