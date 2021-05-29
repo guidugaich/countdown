@@ -1,7 +1,7 @@
 body {
   background-color: rgb(20, 20, 20);
   color: white;
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', 'Arial', 'Verdana';
 }
 
 .app-container {
