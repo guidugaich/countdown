@@ -2,6 +2,8 @@ import React from 'react';
 import TimeInput from './TimeInput';
 import TimeDisplay from './TimeDisplay';
 import './App.css';
+import darkIcon from './icons/todark.png';
+import sunIcon from './icons/tolight.png';
 
 class App extends React.Component {
   constructor() {
@@ -94,7 +96,10 @@ class App extends React.Component {
         <div className="header">
           <h1>countdown</h1>
           <button onClick={ this.switchTheme }>
-            <img src='./icons/todark.png' alt='j'/>
+            <img
+              src={dark ? sunIcon : darkIcon}
+              alt=''
+            />
           </button>
         </div>
         <h3>set the time below</h3>
