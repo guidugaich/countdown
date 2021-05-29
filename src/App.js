@@ -4,6 +4,7 @@ import TimeDisplay from './TimeDisplay';
 import './App.css';
 import darkIcon from './icons/todark.png';
 import sunIcon from './icons/tolight.png';
+import ClockActionButtons from './ClockActionButtons';
 
 class App extends React.Component {
   constructor() {
@@ -109,11 +110,11 @@ class App extends React.Component {
           inputMinutes={ inputMinutes }
           inputSeconds={ inputSeconds }
         />
-        <div className="app-buttons-container">
-          <button onClick={ this.stopCountdown } id="stop">STOP</button>
-          <button onClick={ this.startCountdown } id="start">START</button>
-          <button onClick={ this.resetCountdown } id="reset">RESET</button>
-        </div>
+        <ClockActionButtons
+          stopBtn={ this.stopCountdown }
+          startBtn={ this.startCountdown }
+          resetBtn={ this.resetCountdown }
+        />
         <TimeDisplay
           secondsRemaining = { secondsRemaining }
           running={ running }
