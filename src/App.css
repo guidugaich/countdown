@@ -91,3 +91,19 @@ body {
 .credits a {
   text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+  .app-container h1 {
+    font-size: 30px;
+  }
+
+  .header button img {
+    height: 30px;
+    width: 30px;
+  }
+
+  .app-buttons-container button {
+    width: 120px;
+    margin: 0 10px;
+  }
+}

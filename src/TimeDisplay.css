@@ -34,3 +34,14 @@
 .time-display-running {
   color: lightgreen;
 }
+
+@media screen and (max-width: 600px) {
+  .time-display {
+    width: 90%;
+  }
+
+  .time-display div {
+    font-size: 90px;
+    margin: auto;
+  }
+}
