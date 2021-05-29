@@ -127,7 +127,7 @@ class App extends React.Component {
             target='_blank'
             rel='noreferrer'
           >
-            @guidugaich
+            {' @guidugaich'}
           </a>
         </p>
       </div>
