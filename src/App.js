@@ -27,6 +27,7 @@ class App extends React.Component {
       }));
     } else {
       this.resetCountdown();
+      new Audio('alarm.mp3').play();
     }
   }
 
