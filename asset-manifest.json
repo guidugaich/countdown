@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/countdown/static/css/main.3817aacf.chunk.css",
+    "main.css": "/countdown/static/css/main.7f8da2e1.chunk.css",
     "main.js": "/countdown/static/js/main.32df4863.chunk.js",
     "main.js.map": "/countdown/static/js/main.32df4863.chunk.js.map",
     "runtime-main.js": "/countdown/static/js/runtime-main.4115445f.js",
@@ -8,14 +8,14 @@
     "static/js/2.431522be.chunk.js": "/countdown/static/js/2.431522be.chunk.js",
     "static/js/2.431522be.chunk.js.map": "/countdown/static/js/2.431522be.chunk.js.map",
     "index.html": "/countdown/index.html",
-    "static/css/main.3817aacf.chunk.css.map": "/countdown/static/css/main.3817aacf.chunk.css.map",
+    "static/css/main.7f8da2e1.chunk.css.map": "/countdown/static/css/main.7f8da2e1.chunk.css.map",
     "static/js/2.431522be.chunk.js.LICENSE.txt": "/countdown/static/js/2.431522be.chunk.js.LICENSE.txt",
     "static/media/TimeDisplay.css": "/countdown/static/media/digital-7.93911ab1.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.4115445f.js",
     "static/js/2.431522be.chunk.js",
-    "static/css/main.3817aacf.chunk.css",
+    "static/css/main.7f8da2e1.chunk.css",
     "static/js/main.32df4863.chunk.js"
   ]
 }
