@@ -8,7 +8,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
 }
@@ -28,10 +28,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .header h1 {
   margin: auto;
+}
+
+.header button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+.header button img {
+  height: 40px;
+  width: 40px;
 }
 
 .app-buttons-container {
