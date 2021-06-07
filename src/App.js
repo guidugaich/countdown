@@ -65,15 +65,21 @@ class App extends React.Component {
     let { value } = target;
 
     if (value === '') value = 0;
+    if (!parseFloat(value)) {
+      this.setState({secondsRemaining: 0}, () => {
+        alert('only numbers, please!');
+      });
+    } else {
+      this.setState({[name]: parseFloat(value)}, () => {
+        this.setState({
+          secondsRemaining: (
+            this.state.inputHours * 3600 +
+            this.state.inputMinutes * 60 +
+            this.state.inputSeconds)
+        })
+      });
+    }
 
-    this.setState({[name]: parseFloat(value)}, () => {
-      this.setState({
-        secondsRemaining: (
-          this.state.inputHours * 3600 +
-          this.state.inputMinutes * 60 +
-          this.state.inputSeconds)
-      })
-    }); 
   }
 
   switchTheme = () => {
